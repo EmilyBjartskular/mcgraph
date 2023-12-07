@@ -19,3 +19,12 @@
 
 # Go workspace file
 go.work
+
+# IDE
+.idea/
+.vscode/
+*.html
+
+# Custom
+jars/
+tmp/
