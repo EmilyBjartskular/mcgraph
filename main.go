@@ -28,7 +28,8 @@ func main() {
 	if len(args) == 0 {
 		log.Fatalln("missing directory argument")
 	}
-	fileInfo, err := os.Stat(args[len(args)-1])
+	dir := args[len(args)-1]
+	fileInfo, err := os.Stat(dir)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -36,7 +37,7 @@ func main() {
 		log.Fatalln("not a directory")
 	}
 
-	mods, err := ReadMods()
+	mods, err := ReadMods(dir)
 	if err != nil {
 		log.Fatalln(err)
 	}

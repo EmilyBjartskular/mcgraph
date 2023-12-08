@@ -13,8 +13,7 @@ import (
 
 var ()
 
-func ReadMods() (map[string]Mod, error) {
-	var dir = "jars"
+func ReadMods(dir string) (map[string]Mod, error) {
 
 	var mods map[string]Mod = make(map[string]Mod)
 
